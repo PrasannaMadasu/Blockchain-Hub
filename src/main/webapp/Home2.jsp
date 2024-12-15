@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
             color: #EAEAEA;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .video-background {
@@ -19,25 +20,21 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+            height: 100vh; /* Full screen height */
             z-index: -1; /* Keeps the video in the background */
         }
 
         video {
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video covers the entire background */
             position: absolute;
-            top: 62%; /* Adjust this value to move the video down */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover; /* Ensure the video covers the area without cutting */
+            top: 0;
+            left: 0;
         }
 
         header {
-            background: rgba(0, 0, 0, 0.0); /* Set header background to semi-transparent */
+            background: rgba(0, 0, 0, 0.0); /* Semi-transparent background */
             padding: 10px;
             display: flex;
             align-items: center;
@@ -88,15 +85,13 @@
         }
 
         .banner {
-            height: 80vh;
-            background: rgba(0, 0, 0, 0.0); /* Slightly transparent overlay */
+            height: 100vh; /* Full height */
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
-            text-align: center;
             flex-direction: column;
-            margin-top: 80px; /* Adjust as needed */
+            text-align: center;
+            position: relative;
         }
 
         .banner h2 {
@@ -165,21 +160,11 @@
             <img src="images/tbh_logo.jpeg">
             <h1>The Blockchain Hub</h1>
         </div>
-        <nav>
-            <ul>
-                <!-- Removed the navigation items -->
-            </ul>
-        </nav>
-        <!--  <div class="login-button-container">
-            <a href="login.jsp" class="login-button">
-                <span class="login-icon"></span> Login
-            </a>
-        </div> -->
     </header>
 
     <div class="video-background">
         <video autoplay muted loop>
-            <source src="videos/backgroundhome2.mp4" type="video/mp4">
+            <source src="videos/backgroundhome.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>

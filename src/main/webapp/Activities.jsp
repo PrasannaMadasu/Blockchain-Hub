@@ -219,7 +219,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="">About</a></li>
+                <li><a href="dashboard1.jsp">About</a></li>
                 <li><a href="tech team.jsp">Technical</a></li>
                 <li><a href="non tech team.jsp">Non-Technical</a></li>
                 <li><a href="Activities.jsp"class="active">Activities</a></li>
